@@ -12,7 +12,15 @@ Two datasets from Kaggle will be used, one from Spotify and the other about the 
 
 ## How to replicate this work?
 1. Virtual Machine: Set up your virtual machine to work from it.
-2. Python: Verify that Python is installed using `python --version` or `python3 --version`. If it is not installed, run `apt install python3-pip`.
-3. Repository: Clone this repository using `git clone [url]` and navigate to the added folder.
-4. Environment: Execute `python -m venv venv` to create a new environment or virtual environment.
+   
+3. Python: Verify that Python is installed using `python --version` or `python3 --version`. If it is not installed, run `apt install python3-pip`.
+4. Repository: Clone this repository using `git clone [url]` and navigate to the added folder.
+5. Environment: Execute `python -m venv venv` to create a new environment or virtual environment.
    - Then execute `source venv/bin/activate` to activate the environment.
+6. Installations: Install pandas, mysql, and airflow with the following commands.
+   
+   - Pandas: `pip install pandas`
+     
+   - Mysql: `apt-get update` y then `apt install mysql.connector`
+   - Apache Airflow: `pip install apache-airflow`
+        - After installing, execute `vim ~/airflow/airflow.cfg` and change the **dags_folder** path so that after the user it becomes **/workshop/dags**. Example: **dags_folder = /home/vagrant/workshop/dags**.
