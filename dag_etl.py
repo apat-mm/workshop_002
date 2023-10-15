@@ -8,7 +8,7 @@ from etl import read_csv, read_db, transform_csv, transform_db, merge, load, sto
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2023, 9, 13),  # Update the start date to today or an appropriate date
+    'start_date': datetime(2023, 9, 13), 
     'email': ['airflow@example.com'],
     'email_on_failure': False,
     'email_on_retry': False,
@@ -21,7 +21,7 @@ with DAG(
     'workshop',
     default_args=default_args,
     description='Our first DAG with ETL process!',
-    schedule_interval='@daily',  # Set the schedule interval as per your requirements
+    schedule_interval='@daily', 
 ) as dag:
 
     read_csv = PythonOperator(
