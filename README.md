@@ -24,3 +24,14 @@ Two datasets from Kaggle will be used, one from Spotify and the other about the 
    - Mysql: `apt-get update` y then `apt install mysql.connector`
    - Apache Airflow: `pip install apache-airflow`
         - After installing, execute `vim ~/airflow/airflow.cfg` and change the **dags_folder** path so that after the user it becomes **/workshop/dags**. Example: **dags_folder = /home/vagrant/workshop/dags**.
+7. db_config: Create the db_config.json file with `vim db_config.json` and write the host, user, password, and db credentials.
+8. Run the project: Once all the steps are completed, execute `airflow standalone`. While it's running, it will provide you with a username and password.
+   - In your browser, type the IP address of your machine followed by port 8080. For example: **192.168.1.200:8080** and enter the credentials provided when running Airflow standalone.
+   - Scroll down to the bottom of the interface, and there you will find a DAG called 'workshop'. Go into it and click on the play button to run the project.
+
+
+
+
+
+
+
